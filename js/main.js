@@ -43,7 +43,11 @@ window.onclick = function (event) {
 burger.addEventListener('click', () => {
   burger.classList.toggle('_active');
   menuList.classList.toggle('_active');
-  body.classList.add("_overflow-hidden");
+  if (!body.classList.contains("_overflow-hidden")) {
+    body.classList.add("_overflow-hidden");
+  } else {
+    body.classList.remove("_overflow-hidden");
+  }
 });
 
 formButtons.forEach((el) => {
