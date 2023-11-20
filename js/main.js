@@ -63,39 +63,39 @@ formButtons.forEach((el) => {
 
 window.addEventListener('resize', () => {
   closeBurgerAndMenu();
-  closeRequestModal();
+  // closeRequestModal();
 });
 
 document.querySelectorAll(".js-header-list .nav-list__item-link").forEach((el) => {
   el.addEventListener("click", closeBurgerAndMenu);
 });
 
-// document.querySelector(".js-request-btn").addEventListener("click", () => {
-//   closeBurgerAndMenu();
-//   showModal();
-// });
+document.querySelector(".js-request-btn").addEventListener("click", () => {
+  closeBurgerAndMenu();
+  showModal();
+});
 
-// function toggleFilledClass(input) {
-//   const container = input.parentNode;
-//   container.classList.toggle('_filled', input.value.trim() !== '');
-// }
+function toggleFilledClass(input) {
+  const container = input.parentNode;
+  container.classList.toggle('_filled', input.value.trim() !== '');
+}
 
-// document.querySelectorAll('.form-control').forEach(function (input) {
-//   input.addEventListener('input', function () {
-//     toggleFilledClass(this);
-//   });
+document.querySelectorAll('.form-control').forEach(function (input) {
+  input.addEventListener('input', function () {
+    toggleFilledClass(this);
+  });
 
-//   input.addEventListener('focus', function (event) {
-//     event.stopPropagation();
-//   });
-// });
+  input.addEventListener('focus', function (event) {
+    event.stopPropagation();
+  });
+});
 
-// document.querySelectorAll('.form-control-container img').forEach(function (img) {
-//   img.addEventListener('click', function (event) {
-//     event.stopPropagation();
-//     const container = this.parentNode;
-//     const input = container.querySelector('.form-control');
-//     input.value = '';
-//     container.classList.remove('_filled');
-//   });
-// });
+document.querySelectorAll('.form-control-container img').forEach(function (img) {
+  img.addEventListener('click', function (event) {
+    event.stopPropagation();
+    const container = this.parentNode;
+    const input = container.querySelector('.form-control');
+    input.value = '';
+    container.classList.remove('_filled');
+  });
+});
