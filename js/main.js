@@ -86,6 +86,8 @@ function clearInput(img) {
 }
 
 const inputField = document.querySelector('.form-control');
+
 inputField.addEventListener('click', function(event) {
   event.stopPropagation();
+  event.preventDefault();
 });
