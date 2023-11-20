@@ -61,10 +61,23 @@ formButtons.forEach((el) => {
   });
 });
 
-window.addEventListener('resize', () => {
-  closeBurgerAndMenu();
-  // closeRequestModal();
-});
+// window.addEventListener('resize', () => {
+//   closeBurgerAndMenu();
+// });
+
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+if (isMobile) {
+  window.addEventListener('orientationchange', () => {
+    closeBurgerAndMenu();
+    closeRequestModal();
+  });
+} else {
+  window.addEventListener('resize', () => {
+    closeBurgerAndMenu();
+    closeRequestModal();
+  });
+}
 
 document.querySelectorAll(".js-header-list .nav-list__item-link").forEach((el) => {
   el.addEventListener("click", closeBurgerAndMenu);
