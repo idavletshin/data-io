@@ -1,0 +1,91 @@
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+.form-label {
+  margin-bottom: 0.75rem;
+  color: var(--color-white-darker);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+input.form-control {
+  height: 5rem;
+}
+.form-control-container {
+  position: relative;
+}
+.form-control {
+  width: 100%;
+  padding: 0 3rem 0 1.5rem;
+  color: var(--color-white-darker);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  background-color: var(--color-black-light);
+  border: 0.125rem solid var(--color-white-darker);
+  border-radius: 1rem;
+  outline: 0;
+  transition: var(--transition);
+}
+.form-control:focus {
+  border-color: var(--color-purple-dark);
+}
+.form-control-container img {
+  display: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+._filled img {
+  display: flex;
+}
+.form__btn {
+  width: 100%;
+  margin-top: 10rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  line-height: 2.33;
+  transition: var(--transition);
+}
+.form__btn:hover,
+.form__btn:focus {
+  color: var(--color-white);
+  background-color: var(--color-purple-dark);
+}
+.form__btn:active {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+@media (max-width: 100rem) {
+  .form-group {
+    margin-bottom: calc(24px + 16 * ((100vw - 320px) / 1280));
+  }
+  .form-label {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 1280));
+  }
+  input.form-control {
+    height: calc(56px + 24 * ((100vw - 320px) / 1280));
+  }
+  .form-control {
+    padding-left: calc(12px + 12 * ((100vw - 320px) / 1280));
+    padding-right: calc(36px + 12 * ((100vw - 320px) / 1280));
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1280));
+    border-width: calc(1px + 1 * ((100vw - 320px) / 1280));
+    border-radius: calc(12px + 4 * ((100vw - 320px) / 1280));
+  }
+  .form-control-container img {
+    right: calc(12px + 12 * ((100vw - 320px) / 1280));
+  }
+  .form__btn {
+    margin-top: calc(40px + 120 * ((100vw - 320px) / 1280));
+    padding: calc(8px + 4 * ((100vw - 320px) / 1280)) 0.5rem;
+    border-radius: calc(12px + 4 * ((100vw - 320px) / 1280));
+    font-size: calc(16px + 8 * ((100vw - 320px) / 1280));
+  }
+}

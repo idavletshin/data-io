@@ -1,0 +1,35 @@
+:root {
+  /* colors */
+  --color-black: #000000;
+  --color-black-light: #0d0b0f;
+  --color-black-lighter: #161616;
+
+  --color-warning: #ff6a5f;
+
+  --color-blue-darker: #2858e0;
+  --color-blue-dark: #0088cc;
+  --color-blue: #1da1f2;
+  --color-blue-light: #94afff;
+
+  --color-green: #02b875;
+  --color-green-light: #89dbbd;
+  --color-green-lighter: #e2fe52;
+
+  --color-purple: #8e2de2;
+  --color-purple-dark: #4a00e0;
+
+  --color-white: #ffffff;
+  --color-white-dark: #ebebf5aa;
+  --color-white-darker: #e2dfda;
+
+  /* fonts */
+  --inter-font: "Inter", sans-serif;
+  --manrope-font: "Manrope", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
+  --oswald-font: "Oswald", sans-serif;
+
+  /* timing functions */
+  --ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  --transition: all 0.2s var(--ease-in) 0s;
+}
