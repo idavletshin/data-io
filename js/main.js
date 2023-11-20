@@ -85,9 +85,13 @@ function clearInput(img) {
   container.classList.remove('_filled');
 }
 
-const inputField = document.querySelector('.form-control');
+const modalForm = document.querySelector('.modal__form');
 
-inputField.addEventListener('touchstart', function(event) {
-  event.stopPropagation();
-  event.preventDefault();
+modalForm.addEventListener('click', function(event) {
+  const target = event.target;
+
+  if (target.classList.contains('form-control')) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
 });
