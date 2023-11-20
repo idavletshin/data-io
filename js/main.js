@@ -84,3 +84,8 @@ function clearInput(img) {
   input.value = '';
   container.classList.remove('_filled');
 }
+
+const inputField = document.querySelector('.form-control');
+inputField.addEventListener('click', function(event) {
+  event.stopPropagation();
+});
