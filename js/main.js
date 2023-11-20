@@ -52,14 +52,14 @@ burger.addEventListener('click', () => {
   }
 });
 
-// formButtons.forEach((el) => {
-//   el.addEventListener("click", () => {
-//     if (el.classList.contains("form__btn")) {
-//       closeRequestModal();
-//       closeBurgerAndMenu();
-//     }
-//   });
-// });
+formButtons.forEach((el) => {
+  el.addEventListener("click", () => {
+    if (el.classList.contains("form__btn")) {
+      closeRequestModal();
+      closeBurgerAndMenu();
+    }
+  });
+});
 
 // window.addEventListener('resize', () => {
 //   closeBurgerAndMenu();
