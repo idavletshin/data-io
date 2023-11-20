@@ -61,10 +61,10 @@ formButtons.forEach((el) => {
   });
 });
 
-// window.addEventListener('resize', () => {
-//   closeBurgerAndMenu();
-//   closeRequestModal();
-// });
+window.addEventListener('resize', () => {
+  closeBurgerAndMenu();
+  closeRequestModal();
+});
 
 // document.querySelectorAll(".js-header-list .nav-list__item-link").forEach((el) => {
 //   el.addEventListener("click", closeBurgerAndMenu);
