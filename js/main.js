@@ -87,11 +87,50 @@ function clearInput(img) {
 
 const modalForm = document.querySelector('.modal__form');
 
-modalForm.addEventListener('click', function(event) {
+// modalForm.addEventListener('click', function(event) {
+//   const target = event.target;
+
+//   if (target.classList.contains('form-control')) {
+//     event.stopPropagation();
+//     event.preventDefault();
+//   }
+// });
+
+// const modalForm = document.querySelector('.modal__form');
+const formControls = document.querySelectorAll('.form-control');
+// const closeButtons = document.querySelectorAll('.modal-dialog__close');
+
+// Обработчик для предотвращения закрытия модального окна при фокусе на поле ввода
+modalForm.addEventListener('focusin', function (event) {
   const target = event.target;
 
   if (target.classList.contains('form-control')) {
     event.stopPropagation();
-    event.preventDefault();
   }
 });
+
+// Добавляем обработчик для закрытия модального окна
+// closeButtons.forEach(function (button) {
+//   button.addEventListener('click', closeModal);
+// });
+
+// Добавляем обработчик для фокуса на полях ввода
+formControls.forEach(function (control) {
+  control.addEventListener('focus', function () {
+    // Отменяем закрытие модального окна
+    modalForm.removeEventListener('click', closeModal);
+  });
+
+  // Добавляем обработчик для потери фокуса на полях ввода
+  control.addEventListener('blur', function () {
+    // Возвращаем обработчик закрытия модального окна
+    modalForm.addEventListener('click', closeModal);
+  });
+});
+
+// Функция закрытия модального окна
+// function closeModal() {
+//   modal.style.display = 'none';
+//   requestModal.style.display = 'none';
+//   document.body.classList.remove('_overflow-hidden');
+// }
