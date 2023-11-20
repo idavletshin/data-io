@@ -42,67 +42,60 @@ window.addEventListener('click', function (event) {
   }
 });
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('_active');
-  menuList.classList.toggle('_active');
-  if (!body.classList.contains("_overflow-hidden")) {
-    body.classList.add("_overflow-hidden");
-  } else {
-    body.classList.remove("_overflow-hidden");
-  }
-});
+// burger.addEventListener('click', () => {
+//   burger.classList.toggle('_active');
+//   menuList.classList.toggle('_active');
+//   if (!body.classList.contains("_overflow-hidden")) {
+//     body.classList.add("_overflow-hidden");
+//   } else {
+//     body.classList.remove("_overflow-hidden");
+//   }
+// });
 
-formButtons.forEach((el) => {
-  el.addEventListener("click", () => {
-    if (el.classList.contains("form__btn")) {
-      closeRequestModal();
-      closeBurgerAndMenu();
-    }
-  });
-});
+// formButtons.forEach((el) => {
+//   el.addEventListener("click", () => {
+//     if (el.classList.contains("form__btn")) {
+//       closeRequestModal();
+//       closeBurgerAndMenu();
+//     }
+//   });
+// });
 
-window.addEventListener('resize', () => {
-  closeBurgerAndMenu();
-  closeRequestModal();
-});
+// window.addEventListener('resize', () => {
+//   closeBurgerAndMenu();
+//   closeRequestModal();
+// });
 
-document.querySelectorAll(".js-header-list .nav-list__item-link").forEach((el) => {
-  el.addEventListener("click", closeBurgerAndMenu);
-});
+// document.querySelectorAll(".js-header-list .nav-list__item-link").forEach((el) => {
+//   el.addEventListener("click", closeBurgerAndMenu);
+// });
 
-document.querySelector(".js-request-btn").addEventListener("click", () => {
-  closeBurgerAndMenu();
-  showModal();
-});
+// document.querySelector(".js-request-btn").addEventListener("click", () => {
+//   closeBurgerAndMenu();
+//   showModal();
+// });
 
-function toggleFilledClass(input) {
-  const container = input.parentNode;
-  container.classList.toggle('_filled', input.value.trim() !== '');
-}
-
-// function clearInput(img) {
-//   const container = img.parentNode;
-//   const input = container.querySelector('.form-control');
-//   input.value = '';
-//   container.classList.remove('_filled');
+// function toggleFilledClass(input) {
+//   const container = input.parentNode;
+//   container.classList.toggle('_filled', input.value.trim() !== '');
 // }
 
-document.querySelectorAll('.form-control').forEach(function (input) {
-  input.addEventListener('input', function () {
-    toggleFilledClass(this);
-  });
+// document.querySelectorAll('.form-control').forEach(function (input) {
+//   input.addEventListener('input', function () {
+//     toggleFilledClass(this);
+//   });
 
-  input.addEventListener('focus', function (event) {
-    event.stopPropagation();
-  });
-});
+//   input.addEventListener('focus', function (event) {
+//     event.stopPropagation();
+//   });
+// });
 
-document.querySelectorAll('.form-control-container img').forEach(function (img) {
-  img.addEventListener('click', function (event) {
-    event.stopPropagation();
-    const container = this.parentNode;
-    const input = container.querySelector('.form-control');
-    input.value = '';
-    container.classList.remove('_filled');
-  });
-});
+// document.querySelectorAll('.form-control-container img').forEach(function (img) {
+//   img.addEventListener('click', function (event) {
+//     event.stopPropagation();
+//     const container = this.parentNode;
+//     const input = container.querySelector('.form-control');
+//     input.value = '';
+//     container.classList.remove('_filled');
+//   });
+// });
