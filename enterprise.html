@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css" async />
     <title>Отраслевые решения | Предприятию</title>
   </head>
   <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
     <header class="header _container">
       <nav class="header-nav header__nav">
         <a href="/" class="logo header-nav__logo">
@@ -195,6 +198,12 @@
         </div>
       </div>
     </div>
+    <script>
+      window.addEventListener("load", function () {
+        var preloader = document.getElementById("preloader");
+        preloader.style.display = "none";
+      });
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
