@@ -42,15 +42,15 @@ window.addEventListener('click', function (event) {
   }
 });
 
-// burger.addEventListener('click', () => {
-//   burger.classList.toggle('_active');
-//   menuList.classList.toggle('_active');
-//   if (!body.classList.contains("_overflow-hidden")) {
-//     body.classList.add("_overflow-hidden");
-//   } else {
-//     body.classList.remove("_overflow-hidden");
-//   }
-// });
+burger.addEventListener('click', () => {
+  burger.classList.toggle('_active');
+  menuList.classList.toggle('_active');
+  if (!body.classList.contains("_overflow-hidden")) {
+    body.classList.add("_overflow-hidden");
+  } else {
+    body.classList.remove("_overflow-hidden");
+  }
+});
 
 // formButtons.forEach((el) => {
 //   el.addEventListener("click", () => {
