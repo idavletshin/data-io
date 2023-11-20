@@ -1,4 +1,3 @@
-// modal
 const requestModal = document.querySelector("#request-modal");
 const modal = document.querySelector(".modal");
 const body = document.querySelector('body');
@@ -30,23 +29,12 @@ document.querySelectorAll(".js-request-btn").forEach((el) => {
   });
 });
 
-// document.querySelectorAll(".modal-dialog__close").forEach((button) => {
-//   button.addEventListener("click", closeRequestModal);
-// });
-
 document.querySelectorAll(".modal-dialog__close").forEach((button) => {
   button.addEventListener("click", (event) => {
-    event.stopPropagation(); // предотвратим всплытие события
+    event.stopPropagation();
     closeRequestModal();
   });
 });
-
-
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     closeRequestModal();
-//   }
-// };
 
 window.addEventListener('click', function (event) {
   if (event.target == modal) {
@@ -92,9 +80,29 @@ function toggleFilledClass(input) {
   container.classList.toggle('_filled', input.value.trim() !== '');
 }
 
-function clearInput(img) {
-  const container = img.parentNode;
-  const input = container.querySelector('.form-control');
-  input.value = '';
-  container.classList.remove('_filled');
-}
+// function clearInput(img) {
+//   const container = img.parentNode;
+//   const input = container.querySelector('.form-control');
+//   input.value = '';
+//   container.classList.remove('_filled');
+// }
+
+document.querySelectorAll('.form-control').forEach(function (input) {
+  input.addEventListener('input', function () {
+    toggleFilledClass(this);
+  });
+
+  input.addEventListener('focus', function (event) {
+    event.stopPropagation();
+  });
+});
+
+document.querySelectorAll('.form-control-container img').forEach(function (img) {
+  img.addEventListener('click', function (event) {
+    event.stopPropagation();
+    const container = this.parentNode;
+    const input = container.querySelector('.form-control');
+    input.value = '';
+    container.classList.remove('_filled');
+  });
+});
