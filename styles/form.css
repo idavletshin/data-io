@@ -29,6 +29,7 @@ input.form-control {
   border-radius: 1rem;
   outline: 0;
   transition: var(--transition);
+  pointer-events: auto;
 }
 .form-control:focus {
   border-color: var(--color-purple-dark);

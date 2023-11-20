@@ -87,7 +87,7 @@ function clearInput(img) {
 
 const inputField = document.querySelector('.form-control');
 
-inputField.addEventListener('click', function(event) {
+inputField.addEventListener('touchstart', function(event) {
   event.stopPropagation();
   event.preventDefault();
 });
