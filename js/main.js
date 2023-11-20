@@ -66,9 +66,9 @@ window.addEventListener('resize', () => {
   closeRequestModal();
 });
 
-// document.querySelectorAll(".js-header-list .nav-list__item-link").forEach((el) => {
-//   el.addEventListener("click", closeBurgerAndMenu);
-// });
+document.querySelectorAll(".js-header-list .nav-list__item-link").forEach((el) => {
+  el.addEventListener("click", closeBurgerAndMenu);
+});
 
 // document.querySelector(".js-request-btn").addEventListener("click", () => {
 //   closeBurgerAndMenu();
